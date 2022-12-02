@@ -153,7 +153,7 @@ dc.loadMenuCategories = function () {
 dc.loadMenuItems = function (categoryShort) {
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
-    menuItemsUrl + categoryShort,
+    'https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/' + categoryShort +'.json',
     buildAndShowMenuItemsHTML);
 };
 
